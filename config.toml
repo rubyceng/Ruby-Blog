@@ -1,26 +1,33 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://rubyceng.github.io/'
 languageCode = 'zh-cn'
-title = 'Ruby Blog'
-
-# 修改主题名称为文件夹名
+title = "Ruby 随笔"
 theme = "hugo-PaperMod"
+paginate = 5
 
-# 添加一些基本参数
 [params]
   defaultTheme = "auto"
   ShowShareButtons = true
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
+  
+  # 社交媒体链接移到 params.socialIcons
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/rubyceng"
+  # 如果需要其他社交媒体，可以继续添加
+  # [[params.socialIcons]]
+  #   name = "twitter"
+  #   url = "你的Twitter链接"
 
 [menu]
   [[menu.main]]
     identifier = "posts"
     name = "文章"
     url = "/posts/"
-    weight = 10
+    weight = 1
   [[menu.main]]
     identifier = "tags"
     name = "标签"
     url = "/tags/"
-    weight = 20
+    weight = 2

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Ruby Blog</title>
+    <title>Posts on Ruby 随笔</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Ruby Blog</description>
+    <description>Recent content in Posts on Ruby 随笔</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 25 Jan 2025 15:30:00 +0800</lastBuildDate>
