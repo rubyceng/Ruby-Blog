@@ -23,12 +23,19 @@ jobs:
 
       - name: Clean theme directory
         run: |
-          rm -rf themes/hugo-PaperMod || true
-          mkdir -p themes
+          git submodule deinit -f themes/LoveIt
+          git rm -f themes/LoveIt
+          rm -rf .git/modules/themes/LoveIt
+          rm -rf themes/LoveIt
 
       - name: Print File Schema
         run: |
           tree -L 2
+
+      - name: Install theme
+        run: |
+          git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+          git submodule update --init --recursive
 
       - name: Build
         run: hugo --minify
