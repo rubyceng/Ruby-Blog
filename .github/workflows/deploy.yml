@@ -23,19 +23,15 @@ jobs:
 
       - name: Clean theme directory
         run: |
-          rm -rf themes/LoveIt
-
-      - name: Print File Schema
-        run: |
-          tree -L 3
+          rm -rf themes/LoveIt themes/loveit
 
       - name: Install theme
         run: |
-          git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+          git clone https://github.com/dillonzq/LoveIt.git themes/loveit
 
       - name: Build
         run: |
-          ls -la themes/LoveIt
+          ls -la themes/loveit
           hugo --minify
 
       - name: Deploy to GitHub Pages
