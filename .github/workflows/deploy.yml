@@ -23,9 +23,6 @@ jobs:
 
       - name: Clean theme directory
         run: |
-          git submodule deinit -f themes/LoveIt
-          git rm -f themes/LoveIt
-          rm -rf .git/modules/themes/LoveIt
           rm -rf themes/LoveIt
 
       - name: Print File Schema
@@ -34,11 +31,12 @@ jobs:
 
       - name: Install theme
         run: |
-          git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
-          git submodule update --init --recursive
+          git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 
       - name: Build
-        run: hugo --minify
+        run: |
+          ls -la themes/LoveIt
+          hugo --minify
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
