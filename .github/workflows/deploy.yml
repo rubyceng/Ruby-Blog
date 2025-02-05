@@ -26,9 +26,9 @@ jobs:
           rm -rf themes/hugo-PaperMod || true
           mkdir -p themes
 
-      # - name: Install theme
-      #   run: |
-      #     git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+      - name: Install theme
+        run: |
+          git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 
       - name: Build
         run: hugo --minify
