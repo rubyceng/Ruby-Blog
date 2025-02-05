@@ -11,6 +11,9 @@ enableGitInfo = true
 # whether to use emoji code
 # 是否使用 emoji 代码
 enableEmoji = true
+# 语言设置
+defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = true
 
 
 [params]
