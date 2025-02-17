@@ -4,7 +4,32 @@
         <link>http://localhost:1313/zh-cn/posts/</link>
         <description>所有文章 | Ruby 随笔</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>rubyceng0326@gmail.com (Ruby)</managingEditor>
-            <webMaster>rubyceng0326@gmail.com (Ruby)</webMaster><lastBuildDate>Sat, 25 Jan 2025 15:30:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>rubyceng0326@gmail.com (Ruby)</webMaster><lastBuildDate>Mon, 17 Feb 2025 09:46:49 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>如何使用完善的加密算法对数据安全进行保障</title>
+    <link>http://localhost:1313/zh-cn/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%96%84%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E8%BF%9B%E8%A1%8C%E4%BF%9D%E9%9A%9C/</link>
+    <pubDate>Mon, 17 Feb 2025 09:46:49 &#43;0800</pubDate>
+    <author>Ruby</author>
+    <guid>http://localhost:1313/zh-cn/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%96%84%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E8%BF%9B%E8%A1%8C%E4%BF%9D%E9%9A%9C/</guid>
+    <description><![CDATA[<p>在数字时代，数据安全至关重要。无论是个人隐私信息还是商业机密，保护数据不被未授权访问是每个开发者和用户的基本需求。加密是实现数据安全的核心技术之一。本文将深入浅出地介绍如何使用完善的加密算法来保障数据安全，并以实际的 Node.js 代码示例进行说明。</p>
+<p><strong>重要提示：永远不要尝试自行设计加密算法！</strong> 密码学是一个高度专业化的领域，设计安全的加密算法需要深厚的数学和密码学知识。业余设计的算法往往存在漏洞，容易被破解。 <strong>我们应该始终选择经过密码学界广泛审查和认可的标准算法和库。</strong></p>
+<p>本文将重点介绍如何使用 <strong>PBKDF2</strong> 进行密钥派生，以及使用 <strong>AES-GCM</strong> 进行数据加密和解密，并结合 Node.js 的 <code>crypto</code> 模块进行演示。</p>
+<h2 id="核心概念">核心概念</h2>
+<p>在深入步骤之前，先了解几个关键概念：</p>
+<ul>
+<li><strong>对称加密 (Symmetric Encryption):</strong> 加密和解密使用相同密钥的加密算法。AES 就是一种常用的对称加密算法。</li>
+<li><strong>密钥派生函数 (Key Derivation Function - KDF):</strong> 将用户输入的弱密码（如 PIN 码）转化为强壮的加密密钥的函数。PBKDF2 是常用的 KDF。</li>
+<li><strong>盐 (Salt):</strong> 一个随机生成的数据，用于增加密码哈希和密钥派生的安全性，防止彩虹表攻击。盐不是秘密，可以公开存储。</li>
+<li><strong>初始化向量 (Initialization Vector - IV):</strong> 一个随机生成的数据，用于保证即使使用相同密钥加密相同明文，每次产生的密文也不同。IV 也不是秘密，可以公开存储。</li>
+<li><strong>认证标签 (Authentication Tag - AuthTag):</strong> 由认证加密算法（如 AES-GCM）生成，用于验证数据的完整性和真实性。AuthTag 需要与密文一起存储。</li>
+<li><strong>AES-GCM (Advanced Encryption Standard - Galois/Counter Mode):</strong> 一种先进的对称加密算法，GCM 模式提供了认证加密，集成了保密性、完整性和认证性。</li>
+<li><strong>PBKDF2 (Password-Based Key Derivation Function 2):</strong> 一种常用的密钥派生函数，通过迭代哈希运算，将弱密码转化为强密钥。</li>
+</ul>
+<h2 id="三步保障数据安全">三步保障数据安全</h2>
+<p>我们将数据安全保障过程分解为三个关键步骤：</p>
+<h3 id="步骤-1-密钥派生-key-derivation---使用-pbkdf2">步骤 1: 密钥派生 (Key Derivation) - 使用 PBKDF2</h3>
+<p><strong>目的:</strong> 将用户输入的弱密码（例如简单的数字 PIN 码）转化为强壮的、安全的加密密钥。</p>]]></description>
+</item>
+<item>
     <title>搭建个人博客之旅：Hugo &#43; PaperMod 主题</title>
     <link>http://localhost:1313/zh-cn/posts/first-post/</link>
     <pubDate>Sat, 25 Jan 2025 15:30:00 &#43;0800</pubDate>

@@ -60,6 +60,27 @@
     </div>
 </header><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/zh-cn/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%96%84%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E8%BF%9B%E8%A1%8C%E4%BF%9D%E9%9A%9C/">如何使用完善的加密算法对数据安全进行保障</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/rubyceng" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ruby</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-02-17">2025-02-17</time></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>笔记</a></span></div><div class="content"><h1 id="如何使用完善的加密算法对数据安全进行保障">如何使用完善的加密算法对数据安全进行保障</h1>
+<p>在数字时代，数据安全至关重要。无论是个人隐私信息还是商业机密，保护数据不被未授权访问是每个开发者和用户的基本需求。加密是实现数据安全的核心技术之一。本文将深入浅出地介绍如何使用完善的加密算法来保障数据安全，并以实际的 Node.js 代码示例进行说明。</p>
+<p><strong>重要提示：永远不要尝试自行设计加密算法！</strong> 密码学是一个高度专业化的领域，设计安全的加密算法需要深厚的数学和密码学知识。业余设计的算法往往存在漏洞，容易被破解。 <strong>我们应该始终选择经过密码学界广泛审查和认可的标准算法和库。</strong></p>
+<p>本文将重点介绍如何使用 <strong>PBKDF2</strong> 进行密钥派生，以及使用 <strong>AES-GCM</strong> 进行数据加密和解密，并结合 Node.js 的 <code>crypto</code> 模块进行演示。</p>
+<h2 id="核心概念">核心概念</h2>
+<p>在深入步骤之前，先了解几个关键概念：</p>
+<ul>
+<li><strong>对称加密 (Symmetric Encryption):</strong> 加密和解密使用相同密钥的加密算法。AES 就是一种常用的对称加密算法。</li>
+<li><strong>密钥派生函数 (Key Derivation Function - KDF):</strong> 将用户输入的弱密码（如 PIN 码）转化为强壮的加密密钥的函数。PBKDF2 是常用的 KDF。</li>
+<li><strong>盐 (Salt):</strong> 一个随机生成的数据，用于增加密码哈希和密钥派生的安全性，防止彩虹表攻击。盐不是秘密，可以公开存储。</li>
+<li><strong>初始化向量 (Initialization Vector - IV):</strong> 一个随机生成的数据，用于保证即使使用相同密钥加密相同明文，每次产生的密文也不同。IV 也不是秘密，可以公开存储。</li>
+<li><strong>认证标签 (Authentication Tag - AuthTag):</strong> 由认证加密算法（如 AES-GCM）生成，用于验证数据的完整性和真实性。AuthTag 需要与密文一起存储。</li>
+<li><strong>AES-GCM (Advanced Encryption Standard - Galois/Counter Mode):</strong> 一种先进的对称加密算法，GCM 模式提供了认证加密，集成了保密性、完整性和认证性。</li>
+<li><strong>PBKDF2 (Password-Based Key Derivation Function 2):</strong> 一种常用的密钥派生函数，通过迭代哈希运算，将弱密码转化为强密钥。</li>
+</ul>
+<h2 id="三步保障数据安全">三步保障数据安全</h2>
+<p>我们将数据安全保障过程分解为三个关键步骤：</p></div><div class="post-footer">
+        <a href="/zh-cn/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%96%84%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E8%BF%9B%E8%A1%8C%E4%BF%9D%E9%9A%9C/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/zh-cn/tags/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">加密算法</a>,&nbsp;<a href="/zh-cn/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/">数据安全</a>,&nbsp;<a href="/zh-cn/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/zh-cn/tags/%E5%BC%80%E6%BA%90/">开源</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/zh-cn/posts/first-post/">搭建个人博客之旅：Hugo + PaperMod 主题</a>
     </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/rubyceng" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ruby</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2025-01-25">2025-01-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术笔记</a></span></div><div class="content"><h2 id="为什么选择-hugo">为什么选择 Hugo？</h2>
 <p>Hugo 是一个用 Go 语言编写的静态网站生成器，以其快速的构建速度和简单的配置而闻名。今天，我将分享我使用 Hugo 搭建个人博客的经验。</p>
